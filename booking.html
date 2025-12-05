@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleepWell - Form Pemesanan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="Logo.png" alt="SleepWell Logo" class="logo-image">
+                    <div class="logo-text">
+                        <span class="sleep">Sleep</span>
+                        <span class="well">Well</span>
+                    </div>
+                </div>
+                
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <div class="nav-links" id="nav-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="hotelvilla.html">Hotel & Villa</a>
+                    <a href="leaderboard.html">Leaderboard</a>
+                </div>
+                
+                <div class="user-profile">
+                    <div class="user-info" id="user-info">
+                        <div class="user-avatar">AC</div>
+                        <span>Akmalia Ciety</span>
+                        <span class="badge">Sleep Specialist</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Booking Container -->
+    <main class="booking-main">
+        <div class="container">
+            <div class="booking-wrapper">
+                <!-- Header -->
+                <div class="booking-header">
+                    <h1>Form Pemesanan</h1>
+                    <p class="booking-subtitle">Lengkapi data untuk pemesanan hotel/villa Anda</p>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="booking-progress">
+                    <div class="booking-step active">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Data Diri</span>
+                    </div>
+                    <div class="booking-step">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Kamar & Layanan</span>
+                    </div>
+                    <div class="booking-step">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Pembayaran</span>
+                    </div>
+                    <div class="booking-step">
+                        <span class="step-number">4</span>
+                        <span class="step-label">Konfirmasi</span>
+                    </div>
+                </div>
+
+                <!-- Main Form -->
+                <form id="booking-form" class="booking-form">
+                    <!-- Data Diri Section -->
+                    <div class="booking-section">
+                        <h2 class="section-title"><i class="fas fa-user-circle"></i> Data Diri Pemesan</h2>
+                        
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="fullName" class="form-label"><i class="fas fa-user"></i> Nama Lengkap</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama lengkap" required class="form-input">
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" id="email" name="email" placeholder="nama@gmail.com" required class="form-input">
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="phone" class="form-label"><i class="fas fa-phone"></i> Nomor Telepon</label>
+                                <input type="tel" id="phone" name="phone" placeholder="0812-3456-7890" required class="form-input">
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="idCard" class="form-label"><i class="fas fa-id-card"></i> Nomor KTP/Paspor</label>
+                                <input type="text" id="idCard" name="idCard" placeholder="Nomor identitas" required class="form-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tanggal Menginap Section -->
+                    <div class="booking-section">
+                        <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Tanggal Menginap</h2>
+                        
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="checkin" class="form-label"><i class="fas fa-sign-in-alt"></i> Check-in</label>
+                                <input type="date" id="checkin" name="checkin" required class="form-input">
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="checkout" class="form-label"><i class="fas fa-sign-out-alt"></i> Check-out</label>
+                                <input type="date" id="checkout" name="checkout" required class="form-input">
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="guests" class="form-label"><i class="fas fa-users"></i> Jumlah Tamu</label>
+                                <select id="guests" name="guests" required class="form-select">
+                                    <option value="" disabled selected>Pilih jumlah tamu</option>
+                                    <option value="1">1 Orang</option>
+                                    <option value="2">2 Orang</option>
+                                    <option value="3">3 Orang</option>
+                                    <option value="4">4 Orang</option>
+                                    <option value="5+">5+ Orang</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="rooms" class="form-label"><i class="fas fa-bed"></i> Jumlah Kamar</label>
+                                <select id="rooms" name="rooms" required class="form-select">
+                                    <option value="" disabled selected>Pilih jumlah kamar</option>
+                                    <option value="1">1 Kamar</option>
+                                    <option value="2">2 Kamar</option>
+                                    <option value="3">3 Kamar</option>
+                                    <option value="4+">4+ Kamar</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ganti bagian Room Options dengan ini -->
+                        <div class="booking-section" id="room-section">
+                            <h2 class="section-title"><i class="fas fa-concierge-bell"></i> Pilihan Kamar</h2>
+                            <div class="room-choices" id="room-choices">
+                    
+                    <!-- Room options akan di-generate oleh JavaScript -->
+                            </div>
+                        </div>
+
+                    <!-- Ganti bagian Fasilitas Tambahan dengan ini -->
+                        <div class="booking-section">
+                            <h2 class="section-title"><i class="fas fa-plus-circle"></i> Fasilitas Tambahan (Opsional)</h2>
+                            
+                            <div class="facilities-list" id="facilities-list">
+                    
+                    <!-- Facilities akan di-generate oleh JavaScript -->
+                            </div>
+                        </div>
+
+                    <!-- Ganti bagian Ringkasan Harga dengan ini -->
+                        <div class="booking-section price-summary">
+                            <h2 class="section-title"><i class="fas fa-receipt"></i> Ringkasan Harga</h2>
+                            
+                            <div class="summary-box" id="summary-box">
+                                
+                    <!-- Summary akan di-update oleh JavaScript -->
+                            </div>
+                        </div>
+
+                    <!-- Tombol Aksi -->
+                    <div class="booking-actions">
+                        <a href="hotelvilla.html" class="btn btn-secondary booking-btn">
+                            <i class="fas fa-arrow-left"></i> Kembali
+                        </a>
+                        
+                        <div class="actions-right">
+                            <button type="reset" class="btn btn-reset booking-btn">
+                                <i class="fas fa-redo"></i> Reset Form
+                            </button>
+                            <a href="confirm.html" id="btn-pembayaran" class="btn btn-primary">
+                                Lanjutkan ke Pembayaran <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="logo">
+                        <img src="Logo.png" alt="SleepWell Logo" class="logo-image">
+                        <div class="logo-text">
+                            <span class="sleep">Sleep</span>
+                            <span class="well">Well</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">SleepWell adalah platform reservasi hotel dan villa terkemuka yang menyediakan pengalaman menginap terbaik di berbagai lokasi.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="hotelvilla.html">Hotel & Villa</a></li>
+                        <li><a href="leaderboard.html">Leaderboard</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Kontak Kami</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                        <li><i class="fas fa-phone"></i> +62 21 1234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@sleepwell.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 SleepWell. Semua hak dilindungi.</p>
+                <p class="disclaimer"><i class="fas fa-info-circle"></i> Data Anda aman dan terlindungi. Pembatalan dapat dilakukan maksimal 24 jam sebelum check-in.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Booking page loaded - SIMPLE VERSION');
+        
+        // Cek apakah database berfungsi
+        if (typeof getDatabase !== 'function') {
+            console.error('ERROR: getDatabase function not found in data.js!');
+            document.getElementById('room-choices').innerHTML = 
+                '<div class="error">Error: data.js tidak berfungsi</div>';
+            return;
+        }
+        
+        // Inisialisasi database
+        const db = getDatabase();
+        console.log('Database initialized');
+        
+        // 1. Ambil ID property
+        const urlParams = new URLSearchParams(window.location.search);
+        let propertyId = parseInt(urlParams.get('id'));
+        
+        if (!propertyId || isNaN(propertyId)) {
+            propertyId = parseInt(localStorage.getItem('selected_property'));
+        }
+        
+        if (!propertyId || isNaN(propertyId)) {
+            propertyId = 1; // Default ke hotel pertama
+        }
+        
+        console.log('Property ID:', propertyId);
+        
+        // 2. Ambil data property
+        const property = db.getPropertyById(propertyId);
+        console.log('Property:', property);
+        
+        // Update judul
+        const subtitle = document.querySelector('.booking-subtitle');
+        if (subtitle && property) {
+            subtitle.textContent = `Pemesanan ${property.name} - ${property.location}`;
+        }
+        
+        // 3. Ambil data kamar
+        const rooms = db.getRoomsByProperty(propertyId);
+        console.log('Rooms:', rooms);
+        
+        // Tampilkan kamar
+        displayRooms(rooms);
+        
+        // 4. Ambil fasilitas
+        const facilities = db.getFacilities();
+        console.log('Facilities:', facilities);
+        
+        // Tampilkan fasilitas
+        displayFacilities(facilities);
+        
+        // 5. Setup tanggal default
+        setupDefaultDates();
+        
+        // 6. Setup event listeners
+        setupEventListeners(db, propertyId, rooms, facilities);
+        
+        // 7. Update harga pertama kali
+        updatePriceSummary(db, propertyId, rooms, facilities);
+        
+        console.log('Booking page ready!');
+        
+        // ==================== FUNGSI-FUNGSI ====================
+        
+        function displayRooms(rooms) {
+            const roomChoices = document.getElementById('room-choices');
+            if (!roomChoices) return;
+            
+            if (rooms.length === 0) {
+                roomChoices.innerHTML = '<div class="no-rooms">Tidak ada kamar tersedia</div>';
+                return;
+            }
+            
+            let html = '';
+            rooms.forEach((room, index) => {
+                html += `
+                    <div class="room-option">
+                        <input type="radio" id="room-${room.id}" name="roomType" 
+                               value="${room.id}" ${index === 0 ? 'checked' : ''} 
+                               class="room-radio" data-price="${room.price}">
+                        <label for="room-${room.id}" class="room-label">
+                            <div class="room-icon"><i class="fas fa-bed"></i></div>
+                            <h3 class="room-name">${room.name}</h3>
+                            <p class="room-description">${room.description}</p>
+                            <p class="room-price">Rp ${formatPrice(room.price)}<span class="price-unit">/malam</span></p>
+                        </label>
+                    </div>
+                `;
+            });
+            
+            roomChoices.innerHTML = html;
+        }
+        
+        function displayFacilities(facilities) {
+            const facilitiesList = document.getElementById('facilities-list');
+            if (!facilitiesList) return;
+            
+            let html = '';
+            facilities.forEach(facility => {
+                const isBreakfast = facility.id === 1;
+                html += `
+                    <label class="facility-item">
+                        <input type="checkbox" name="facilities" value="${facility.id}" 
+                               class="facility-checkbox" id="facility-${facility.id}"
+                               data-price="${facility.price}">
+                        <span class="facility-checkmark"></span>
+                        <i class="fas ${facility.icon} facility-icon"></i>
+                        <span class="facility-text">${facility.name} (Rp ${formatPrice(facility.price)}${isBreakfast ? '/orang' : ''})</span>
+                    </label>
+                `;
+            });
+            
+            facilitiesList.innerHTML = html;
+        }
+        
+        function setupDefaultDates() {
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            
+            // Format: YYYY-MM-DD
+            const todayStr = today.toISOString().split('T')[0];
+            const tomorrowStr = tomorrow.toISOString().split('T')[0];
+            
+            document.getElementById('checkin').value = todayStr;
+            document.getElementById('checkin').min = todayStr;
+            document.getElementById('checkout').value = tomorrowStr;
+            document.getElementById('checkout').min = tomorrowStr;
+            
+            // Set default guests dan rooms
+            document.getElementById('guests').value = '2';
+            document.getElementById('rooms').value = '1';
+        }
+        
+        function setupEventListeners(db, propertyId, rooms, facilities) {
+            // Tanggal berubah
+            document.getElementById('checkin').addEventListener('change', function() {
+                const checkin = new Date(this.value);
+                const minCheckout = new Date(checkin);
+                minCheckout.setDate(minCheckout.getDate() + 1);
+                
+                const checkoutInput = document.getElementById('checkout');
+                checkoutInput.min = minCheckout.toISOString().split('T')[0];
+                
+                if (new Date(checkoutInput.value) <= checkin) {
+                    checkoutInput.value = minCheckout.toISOString().split('T')[0];
+                }
+                
+                updatePriceSummary(db, propertyId, rooms, facilities);
+            });
+            
+            document.getElementById('checkout').addEventListener('change', function() {
+                updatePriceSummary(db, propertyId, rooms, facilities);
+            });
+            
+            // Tamu dan kamar berubah
+            document.getElementById('guests').addEventListener('change', function() {
+                updatePriceSummary(db, propertyId, rooms, facilities);
+            });
+            
+            document.getElementById('rooms').addEventListener('change', function() {
+                updatePriceSummary(db, propertyId, rooms, facilities);
+            });
+            
+            // Kamar dipilih
+            document.addEventListener('change', function(e) {
+                if (e.target.matches('.room-radio')) {
+                    updatePriceSummary(db, propertyId, rooms, facilities);
+                }
+            });
+            
+            // Fasilitas dipilih
+            document.addEventListener('change', function(e) {
+                if (e.target.matches('.facility-checkbox')) {
+                    updatePriceSummary(db, propertyId, rooms, facilities);
+                }
+            });
+            
+            // Tombol Reset
+            const resetBtn = document.querySelector('button[type="reset"]');
+            resetBtn.addEventListener('click', function(e) {
+                if (confirm('Reset semua data form?')) {
+                    setupDefaultDates();
+                    if (rooms.length > 0) {
+                        document.getElementById(`room-${rooms[0].id}`).checked = true;
+                    }
+                    document.querySelectorAll('.facility-checkbox').forEach(cb => cb.checked = false);
+                    updatePriceSummary(db, propertyId, rooms, facilities);
+                    setTimeout(() => alert('Form telah direset!'), 100);
+                }
+            });
+            
+            // Tombol Pembayaran
+            document.getElementById('btn-pembayaran').addEventListener('click', function(e) {
+                e.preventDefault();
+                processBooking(db, property, rooms, facilities);
+            });
+        }
+        
+        function updatePriceSummary(db, propertyId, rooms, facilities) {
+            // Hitung jumlah malam
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            const nights = calculateNights(checkin, checkout);
+            
+            // Ambil kamar yang dipilih
+            const selectedRoomRadio = document.querySelector('.room-radio:checked');
+            if (!selectedRoomRadio) return;
+            
+            const roomId = parseInt(selectedRoomRadio.value);
+            const selectedRoom = rooms.find(r => r.id === roomId);
+            if (!selectedRoom) return;
+            
+            // Ambil fasilitas yang dipilih
+            const selectedFacilities = Array.from(
+                document.querySelectorAll('.facility-checkbox:checked')
+            ).map(cb => parseInt(cb.value));
+            
+            // Jumlah tamu dan kamar
+            const guests = parseInt(document.getElementById('guests').value) || 1;
+            const roomCount = parseInt(document.getElementById('rooms').value) || 1;
+            
+            // Hitung total
+            const total = db.calculateTotal(propertyId, roomId, nights, selectedFacilities, guests);
+            
+            // Tampilkan ringkasan
+            displaySummary(nights, selectedRoom, roomCount, selectedFacilities, facilities, guests, total);
+        }
+        
+        function calculateNights(checkin, checkout) {
+            const checkinDate = new Date(checkin);
+            const checkoutDate = new Date(checkout);
+            const diffTime = checkoutDate - checkinDate;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            return diffDays > 0 ? diffDays : 1;
+        }
+        
+        function displaySummary(nights, room, roomCount, selectedFacilities, facilities, guests, total) {
+            const summaryBox = document.getElementById('summary-box');
+            
+            // Hitung harga kamar
+            const roomPrice = room.price * nights * roomCount;
+            
+            // Hitung harga fasilitas
+            let facilitiesPrice = 0;
+            selectedFacilities.forEach(facilityId => {
+                const facility = facilities.find(f => f.id === facilityId);
+                if (facility) {
+                    if (facilityId === 1) { // Sarapan
+                        facilitiesPrice += facility.price * guests * nights;
+                    } else {
+                        facilitiesPrice += facility.price;
+                    }
+                }
+            });
+            
+            // Hitung pajak
+            const subtotal = roomPrice + facilitiesPrice;
+            const tax = subtotal * 0.1;
+            
+            let html = `
+                <div class="summary-row">
+                    <span>${room.name} (${nights} malam × ${roomCount} kamar)</span>
+                    <span>Rp ${formatPrice(roomPrice)}</span>
+                </div>
+            `;
+            
+            if (selectedFacilities.length > 0) {
+                html += `
+                    <div class="summary-row">
+                        <span>Fasilitas Tambahan</span>
+                        <span>Rp ${formatPrice(facilitiesPrice)}</span>
+                    </div>
+                `;
+            }
+            
+            html += `
+                <div class="summary-row">
+                    <span>Pajak & Layanan (10%)</span>
+                    <span>Rp ${formatPrice(tax)}</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span><strong>Total Pembayaran</strong></span>
+                    <span><strong>Rp ${formatPrice(total)}</strong></span>
+                </div>
+            `;
+            
+            summaryBox.innerHTML = html;
+        }
+        
+        function processBooking(db, property, rooms, facilities) {
+            // Validasi form
+            const requiredFields = ['fullName', 'email', 'phone', 'idCard'];
+            let isValid = true;
+            
+            requiredFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = 'red';
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            
+            if (!isValid) {
+                alert('Harap lengkapi semua data diri!');
+                return;
+            }
+            
+            // Kumpulkan data booking
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            const nights = calculateNights(checkin, checkout);
+            const guests = parseInt(document.getElementById('guests').value) || 1;
+            const roomCount = parseInt(document.getElementById('rooms').value) || 1;
+            
+            const selectedRoomRadio = document.querySelector('.room-radio:checked');
+            const roomId = parseInt(selectedRoomRadio.value);
+            const selectedRoom = rooms.find(r => r.id === roomId);
+            
+            const selectedFacilities = Array.from(
+                document.querySelectorAll('.facility-checkbox:checked')
+            ).map(cb => parseInt(cb.value));
+            
+            const total = db.calculateTotal(property.id, roomId, nights, selectedFacilities, guests);
+            
+            // Buat objek booking
+            const booking = {
+                propertyId: property.id,
+                propertyName: property.name,
+                propertyLocation: property.location,
+                roomType: selectedRoom.name,
+                roomPrice: selectedRoom.price,
+                checkin: checkin,
+                checkout: checkout,
+                nights: nights,
+                guests: guests,
+                rooms: roomCount,
+                facilities: selectedFacilities.map(id => {
+                    const facility = facilities.find(f => f.id === id);
+                    return facility ? facility.name : '';
+                }),
+                totalPrice: total,
+                customerName: document.getElementById('fullName').value,
+                customerEmail: document.getElementById('email').value,
+                customerPhone: document.getElementById('phone').value,
+                customerId: document.getElementById('idCard').value,
+                bookingDate: new Date().toISOString(),
+                status: 'pending'
+            };
+            
+            // Simpan booking
+            const savedBooking = db.saveBooking(booking);
+            
+            // Simpan ke localStorage untuk halaman konfirmasi
+            localStorage.setItem('last_booking', JSON.stringify(savedBooking));
+            
+            // Tampilkan konfirmasi
+            alert(`Pemesanan berhasil!\n\nTotal: Rp ${formatPrice(total)}\n\nAnda akan diarahkan ke halaman konfirmasi.`);
+            
+            // Redirect ke halaman konfirmasi
+            window.location.href = 'confirm.html?bookingId=' + savedBooking.id;
+        }
+        
+        function formatPrice(price) {
+            return price.toLocaleString('id-ID');
+        }
+    });
+</script>
+</body>
+</html>

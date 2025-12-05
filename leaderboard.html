@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleepWell - Hotel & Villa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="Logo.png" alt="SleepWell Logo" class="logo-image">
+                    <div class="logo-text">
+                        <span class="sleep">Sleep</span>
+                        <span class="well">Well</span>
+                    </div>
+                </div>
+                
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <div class="nav-links" id="nav-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="hotelvilla.html">Hotel & Villa</a>
+                    <a href="leaderboard.html">Leaderboard</a>
+                </div>
+                
+                <div class="user-profile">
+                    <div class="user-info" id="user-info">
+                        <div class="user-avatar">AC</div>
+                        <span>Akmalia Ciety</span>
+                        <span class="badge">Sleep Specialist</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="hotelvilla.html" id="book-now" class="btn btn-secondary">Pesan Sekarang</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<!-- leaderboard -->
+    <section class="leaderboard-section" id="leaderboard">
+        
+        <div class="container">
+            <div class="section-title">
+                <span class="sleep-leader">Sleep</span>
+                <span class="well-leader">Well </span>
+                <h2>Leaderboard</h2>
+                <p>Lihat peringkat pengguna teraktif berdasarkan jumlah pemesanan</p>
+            </div>
+            
+            <div class="leaderboard-container">
+                <div class="leaderboard-header">
+                    <h3>Top 30</h3>
+                    <div class="title-group">
+                        <span class="sleep-text">Sleep</span>
+                        <span class="well-text">Well </span>
+                    </div>
+                    <h3>Users</h3>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn" style="background-color: var(--primary); color: white;">Mingguan</button>
+                        <button class="btn" style="background-color: #e9ecef; color: var(--dark);">Bulanan</button>
+                        <button class="btn" style="background-color: #e9ecef; color: var(--dark);">Tahunan</button>
+                    </div>
+                </div>
+                
+                <div class="leaderboard-list" id="leaderboard-list">
+                    <!-- Leaderboard Item 1 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">1</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-gold">
+                                SJ
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Sarah Johnson</div>
+                                <span class="leaderboard-badge badge-master">Sleep Master</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">394 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 2 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">2</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-silver">
+                                MC
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Michael Chen</div>
+                                <span class="leaderboard-badge badge-master">Sleep Master</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">387 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 3 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">3</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-bronze">
+                                JD
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">John Doe</div>
+                                <span class="leaderboard-badge badge-master">Sleep Master</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">380 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 4 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">4</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar">
+                                LN
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Lisa Neya</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">346 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 5 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">5</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                AC
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Akmalia Ciety</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">315 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 6 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">6</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                MG
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Maria Garcia</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">305 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 7 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">7</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                RB
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Robert Brown</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">300 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 8 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">8</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                EW
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Emma Wilson</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">298 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 9 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">9</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                JT
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">James Taylor</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">276 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 10 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">10</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                OM
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Olivia Martinez</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">269 pts</div>
+                    </div>
+                    <!-- Leaderboard Item 11 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">11</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                AL
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Aurora Lane</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">265 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 12 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">12</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                CB
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Cyrus Bennett</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">257 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 13 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">13</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                KJ
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Kim Jennie</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">243 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 14 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">14</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar">
+                                OR
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Olivia Rodrigo</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">221 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 15 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">15</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                JB
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Justin Bieber</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">220 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 16 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">16</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                AT
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Ayu Ting Ting</div>
+                                <span class="leaderboard-badge badge-seeker">Sleep Seeker</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">211 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 17 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">17</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                R
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Rebecca</div>
+                                <span class="leaderboard-badge badge-seeker">Sleep Seeker</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">203 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 18 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">18</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                TS
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Taylor Swift</div>
+                                <span class="leaderboard-badge badge-seeker">Sleep Seeker</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">199 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 19 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">19</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                TL
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Taylor Lautner</div>
+                                <span class="leaderboard-badge badge-seeker">Sleep Seeker</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">194 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 20 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">20</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                AG
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Ariana Grande</div>
+                                <span class="leaderboard-badge badge-seeker">Sleep Seeker</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">76 pts</div>
+                    </div>
+                    <!-- Leaderboard Item 21 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">21</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                AB
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Arash Buana</div>
+                                <span class="leaderboard-badge badge-seeker">Sleep Seeker</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">191 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 22 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">22</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                L
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">LANY</div>
+                                <span class="leaderboard-badge badge-seeker">Sleep Seeker</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">184 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 23 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">23</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                B
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Bernadya</div>
+                                <span class="leaderboard-badge badge-newbie">Sleep Newbie</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">182 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 24 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">24</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                AL
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Adrianne Lenker</div>
+                                <span class="leaderboard-badge badge-newbie">Sleep Newbie</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">173 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 25 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">25</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                BM
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Bruno Major</div>
+                                <span class="leaderboard-badge badge-newbie">Sleep Newbie</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">169 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 26 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">26</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                N
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">NIKI</div>
+                                <span class="leaderboard-badge badge-newbie">Sleep Newbie</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">150 pts</div>
+                    </div>
+                    <!-- Leaderboard Item 27 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">27</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                NA
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Nadin Amizah</div>
+                                <span class="leaderboard-badge badge-newbie">Sleep Newbie</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">142 pts</div>
+                    </div>
+                    <!-- Leaderboard Item 28 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">28</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                CP
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Carlie Puth</div>
+                                <span class="leaderboard-badge badge-newbie">Sleep Newbie</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">132 pts</div>
+                    </div>
+                    <!-- Leaderboard Item 29 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">29</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                R
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Rose</div>
+                                <span class="leaderboard-badge badge-newbie">Sleep Newbie</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">129 pts</div>
+                    </div>
+                    <!-- Leaderboard Item 30 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">30</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                GA
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Gracie Abrams</div>
+                                <span class="leaderboard-badge badge-newbie">Sleep Newbie</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">119 pts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleepWell - Reservasi Hotel & Villa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="Logo.png" alt="SleepWell Logo" class="logo-image">
+                    <div class="logo-text">
+                        <span class="sleep">Sleep</span>
+                        <span class="well">Well</span>
+                    </div>
+                </div>
+                
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <div class="nav-links" id="nav-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="hotelvilla.html">Hotel & Villa</a>
+                    <a href="leaderboard.html">Leaderboard</a>
+                </div>
+                
+                <div class="user-profile">
+                    <div class="user-info" id="user-info">
+                        <div class="user-avatar">AC</div>
+                        <span>Akmalia Ciety</span>
+                        <span class="badge">Sleep Specialist</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="hotelvilla.html" id="book-now" class="btn btn-secondary">Pesan Sekarang</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Temukan Tempat Menginap Sempurna</h1>
+            <span class="header-text">Dengan</span>
+            <span class="sleep-text">Sleep</span>
+            <span class="well-text">Well</span>
+           <span class="header-text"> , Anda dapat dengan mudah memesan hotel atau villa favorit di lokasi terbaik. Nikmati pengalaman menginap tak terlupakan dengan berbagai fasilitas eksklusif yang dapat anda dapatkan. </span>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <h3 style="margin-bottom: 20px; color: var(--dark);">Cari Hotel & Villa</h3>
+                <div class="search-form">
+                    <div class="form-group">
+                        <label for="location">Lokasi</label>
+                        <input type="text" id="location" placeholder="Kota atau daerah tujuan" value="Bali">
+                    </div>
+                    <div class="form-group">
+                        <label for="check-in">Check-in</label>
+                        <input type="date" id="check-in" value="2025-12-15">
+                    </div>
+                    <div class="form-group">
+                        <label for="check-out">Check-out</label>
+                        <input type="date" id="check-out" value="2025-12-20">
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Jumlah Tamu</label>
+                        <select id="guests">
+                            <option value="1">1 Tamu</option>
+                            <option value="2" selected>2 Tamu</option>
+                            <option value="3">3 Tamu</option>
+                            <option value="4">4 Tamu</option>
+                            <option value="5+">5+ Tamu</option>
+                        </select>
+                    </div>
+                <div class="form-group full-width">
+                        <a href="hotelvilla.html" class="btn btn-primary search-button">Cari Sekarang</a>
+                </div>
+                </div>
+                <div class="quick-actions">
+                    <button class="btn quick-btn location-btn">
+                        <i class="fas fa-location-dot"></i> Gunakan Lokasi Saya
+                    </button>
+                    <button class="btn quick-btn recommendation-btn">
+                        <i class="fas fa-heart"></i> Wishlist
+                    </button>
+                    <button class="btn quick-btn promotion-btn">
+                        <i class="fas fa-percentage"></i> Promo Spesial
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+<section class="properties-section" id="properties">
+    <div class="container">
+        <div class="section-title">
+            <h2>Rekomendasi Untuk Anda</h2>
+            <p>Hotel dan villa terbaik dengan fasilitas lengkap untuk kenyamanan Anda</p>
+        </div>
+        
+        <div class="properties-grid" id="properties-grid">
+            <!-- Property cards akan di-generate oleh JavaScript -->
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="hotelvilla.html" id="load-more" class="btn btn-secondary">
+                Lihat Lebih Banyak <i class="fas fa-plus"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Leaderboard Section -->
+    <section class="leaderboard-section" id="leaderboard">
+        
+        <div class="container">
+            <div class="section-title">
+                <span class="sleep-leader">Sleep</span>
+                <span class="well-leader">Well </span>
+                <h2>Leaderboard</h2>
+                <p>Lihat peringkat pengguna teraktif berdasarkan jumlah pemesanan</p>
+            </div>
+            
+            <div class="leaderboard-container">
+                <div class="leaderboard-header">
+                    <h3>Top 10</h3>
+                    <div class="title-group">
+                        <span class="sleep-text">Sleep</span>
+                        <span class="well-text">Well </span>
+                    </div>
+                    <h3>Users</h3>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn" style="background-color: var(--primary); color: white;">Mingguan</button>
+                        <button class="btn" style="background-color: #e9ecef; color: var(--dark);">Bulanan</button>
+                        <button class="btn" style="background-color: #e9ecef; color: var(--dark);">Tahunan</button>
+                    </div>
+                </div>
+                
+                <div class="leaderboard-list" id="leaderboard-list">
+                    <!-- Leaderboard Item 1 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">1</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-gold">
+                                SJ
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Sarah Johnson</div>
+                                <span class="leaderboard-badge badge-master">Sleep Master</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">394 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 2 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">2</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-silver">
+                                MC
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Michael Chen</div>
+                                <span class="leaderboard-badge badge-master">Sleep Master</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">387 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 3 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">3</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-bronze">
+                                JD
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">John Doe</div>
+                                <span class="leaderboard-badge badge-master">Sleep Master</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">380 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 4 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">4</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar">
+                                LN
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Lisa Neya</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">346 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 5 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">5</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                AC
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Akmalia Ciety</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">315 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 6 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">6</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                MG
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Maria Garcia</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">305 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 7 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">7</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                RB
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Robert Brown</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">300 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 8 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">8</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                EW
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Emma Wilson</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">298 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 9 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">9</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                JT
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">James Taylor</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">276 pts</div>
+                    </div>
+
+                    <!-- Leaderboard Item 10 -->
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">10</div>
+                        <div class="leaderboard-user">
+                            <div class="user-avatar-blue">
+                                OM
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">Olivia Martinez</div>
+                                <span class="leaderboard-badge badge-specialist">Sleep Specialist</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard-points">269 pts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Badges Section -->
+    <section class="badges-section" id="badges">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lencana</h2>
+                <span class="sleep-leader">Sleep</span>
+                <span class="well-leader">Well </span>
+                <p>Kumpulkan lencana dengan melakukan pemesanan hotel dan villa</p>
+            </div>
+            
+            <div class="badges-container">
+                <div class="badge-card">
+                    <div class="badge-icon badge-icon-newbie">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Sleep Newbie</h3>
+                    <p>Pemula yang baru saja memulai perjalanan dengan SleepWell. Diberikan setelah pemesanan pertama.</p>
+                    <div style="margin-top: 15px;">
+                        <span class="badge badge-newbie">Level 1</span>
+                    </div>
+                </div>
+                
+                <div class="badge-card">
+                    <div class="badge-icon badge-icon-seeker">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <h3>Sleep Seeker</h3>
+                    <p>Pencari penginapan yang aktif. Diberikan setelah 5 pemesanan berhasil.</p>
+                    <div style="margin-top: 15px;">
+                        <span class="badge badge-seeker">Level 2</span>
+                    </div>
+                </div>
+                
+                <div class="badge-card">
+                    <div class="badge-icon badge-icon-specialist">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>Sleep Specialist</h3>
+                    <p>Spesialis penginapan berpengalaman. Diberikan setelah 15 pemesanan berhasil.</p>
+                    <div style="margin-top: 15px;">
+                        <span class="badge badge-specialist">Level 3</span>
+                    </div>
+                </div>
+                
+                <div class="badge-card">
+                    <div class="badge-icon badge-icon-master">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Sleep Master</h3>
+                    <p>Master penginapan dengan pengalaman luas. Diberikan setelah 30 pemesanan berhasil.</p>
+                    <div style="margin-top: 15px;">
+                        <span class="badge badge-master">Level 4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="logo">
+                    <img src="Logo.png" alt="SleepWell Logo" class="logo-image">
+                    <div class="logo-text">
+                        <span class="sleep">Sleep</span>
+                        <span class="well">Well</span>
+                    </div>
+                </div>
+                    <p class="p"> SleepWell adalah platform reservasi hotel dan villa terkemuka yang menyediakan pengalaman menginap terbaik di berbagai lokasi.</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#properties">Hotel & Villa</a></li>
+                        <li><a href="#leaderboard">Leaderboard</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="#">Pemesanan Online</a></li>
+                        <li><a href="#">Cari Berdasarkan Lokasi</a></li>
+                        <li><a href="#">Rekomendasi Personal</a></li>
+                        <li><a href="#">Program Loyalitas</a></li>
+                        <li><a href="#">Bantuan 24/7</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Kontak Kami</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Jakarta, Indonesia</li>
+                        <li><i class="fas fa-phone" style="margin-right: 10px;"></i> +62 21 1234 5678</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> info@sleepwell.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 SleepWell. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- User Profile Modal -->
+    <div class="modal" id="user-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h2>Profil Pengguna</h2>
+            
+            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                <div class="user-avatar" style="width: 80px; height: 80px; font-size: 1.8rem;">JD</div>
+                <div>
+                    <h3 style="color: var(--dark);">Akmalia Ciety</h3>
+                    <span class="badge"> Sleep Specialist</span>
+                </div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <p style="text-align: center; margin-bottom: 30px;">65% menuju level berikutnya (Sleep Master)</p>
+            
+            <div class="user-stats">
+                <div class="stat-item">
+                    <div class="stat-value">18</div>
+                    <div class="stat-label">Pemesanan</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">7</div>
+                    <div class="stat-label">Kota</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">42</div>
+                    <div class="stat-label">Malam</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">#5</div>
+                    <div class="stat-label">Peringkat</div>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" style="width: 100%;">Lihat Detail Pemesanan</button>
+        </div>
+    </div>
+
+<script src="js/data.js"></script>
+<script src="js/home.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Beranda loaded');
+    
+    try {
+        // CEK apakah data.js berhasil di-load
+        console.log('Jumlah properti di data.js:', sleepwellProperties ? sleepwellProperties.length : 'tidak ada');
+        
+        // AMBIL 6 PROPERTI PERTAMA dari data.js
+        let properties = [];
+        if (sleepwellProperties && sleepwellProperties.length >= 6) {
+            properties = sleepwellProperties.slice(0, 6); // Ambil 6 pertama
+            console.log('Ambil 6 properti pertama:', properties.map(p => p.name));
+        } else if (sleepwellProperties) {
+            // Jika kurang dari 6, ambil semua yang ada
+            properties = sleepwellProperties.slice(0, 6);
+            console.log('Kurang dari 6 properti, ambil semua:', properties.length);
+        } else {
+            // Fallback jika data.js tidak ada
+            console.error('sleepwellProperties tidak ditemukan!');
+            properties = [
+                {
+                    id: 1,
+                    name: "Amora Hills",
+                    type: "hotel",
+                    location: "Kuta, Bali",
+                    rating: 5,
+                    price: 1760000,
+                    oldPrice: 2200000,
+                    discount: 20,
+                    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    isWishlist: false
+                },
+                {
+                    id: 2,
+                    name: "Asana Village",
+                    type: "villa",
+                    location: "Ubud, Bali",
+                    rating: 4.4,
+                    price: 2288000,
+                    oldPrice: null,
+                    discount: 0,
+                    image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&auto=format&fit=crop",
+                    isWishlist: false
+                },
+                {
+                    id: 3,
+                    name: "Palmora Uluwatu",
+                    type: "resort",
+                    location: "Nusa Dua, Bali",
+                    rating: 4.8,
+                    price: 2250000,
+                    oldPrice: 3000000,
+                    discount: 25,
+                    image: "https://images.unsplash.com/photo-1596470396723-c9fcecac1c7c?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    isWishlist: false
+                },
+                {
+                    id: 4,
+                    name: "Arcline Residence",
+                    type: "villa",
+                    location: "Bedugul, Bali",
+                    rating: 4,
+                    price: 1760000,
+                    oldPrice: null,
+                    discount: 0,
+                    image: "https://plus.unsplash.com/premium_photo-1661964402307-02267d1423f5?q=80&w=2573&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    isWishlist: false
+                },
+                {
+                    id: 5,
+                    name: "Tropica Luna Villa",
+                    type: "hotel",
+                    location: "Gianyar, Bali",
+                    rating: 4,
+                    price: 3354000,
+                    oldPrice: 4300000,
+                    discount: 22,
+                    image: "https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    isWishlist: false
+                },
+                {
+                    id: 6,
+                    name: "Bhuana Bliss Villa",
+                    type: "resort",
+                    location: "Ubud, Bali",
+                    rating: 5,
+                    price: 2754000,
+                    oldPrice: null,
+                    discount: 0,
+                    image: "https://images.unsplash.com/photo-1688653802629-5360086bf632?q=80&w=3732&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    isWishlist: false
+                }
+            ];
+        }
+        
+        console.log('Properties ready to display:', properties.length, 'items');
+        
+        // Tampilkan properti
+        displayProperties(properties);
+        
+        // Setup event listeners
+        setupEventListeners();
+        
+        console.log('Beranda berhasil dimuat dengan', properties.length, 'properti');
+        
+    } catch (error) {
+        console.error('Error:', error);
+        showError('Gagal memuat: ' + error.message);
+    }
+});
+
+// Fungsi untuk menampilkan properti (JANGAN DIHAPUS)
+function displayProperties(properties) {
+    const propertiesGrid = document.getElementById('properties-grid');
+    
+    if (!propertiesGrid) {
+        console.error('Element properties-grid tidak ditemukan');
+        return;
+    }
+    
+    propertiesGrid.innerHTML = '';
+    
+    if (!properties || properties.length === 0) {
+        propertiesGrid.innerHTML = `
+            <div style="text-align: center; padding: 40px; color: var(--gray); grid-column: 1 / -1;">
+                <i class="fas fa-hotel fa-3x" style="margin-bottom: 20px;"></i>
+                <h3>Belum ada hotel/villa tersedia</h3>
+                <p>Silakan coba lagi nanti</p>
+            </div>
+        `;
+        return;
+    }
+    
+    properties.forEach(property => {
+        const card = createPropertyCard(property);
+        propertiesGrid.innerHTML += card;
+    });
+}
+
+// Fungsi untuk membuat kartu properti (JANGAN DIHAPUS)
+function createPropertyCard(property) {
+    if (!property) return '';
+    
+    const id = property.id || 1;
+    const name = property.name || 'Hotel Tidak Diketahui';
+    const type = property.type || 'hotel';
+    const location = property.location || 'Lokasi tidak diketahui';
+    const rating = property.rating || 4.0;
+    const price = property.price || 500000;
+    const oldPrice = property.oldPrice || null;
+    const discount = property.discount || 0;
+    const image = property.image || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop';
+    const isWishlist = property.isWishlist || false;
+    
+    let html = `
+        <div class="property-card" data-id="${id}">
+            <img src="${image}" 
+                 alt="${name}" 
+                 class="property-img"
+                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop'">
+            <div class="property-content">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <h3 class="property-title">${name}</h3>
+                    <span class="${type}-badge">${type === 'hotel' ? 'Hotel' : type === 'villa' ? 'Villa' : 'Resort'}</span>
+                </div>
+                <div class="property-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>${location}</span>
+    `;
+    
+    if (discount > 0) {
+        html += `<div class="discount-badge">-${discount}%</div>`;
+    }
+    
+    html += `
+                    <button class="wishlist-btn"><i class="${isWishlist ? 'fas' : 'far'} fa-heart"></i></button>
+                </div>
+                <div class="property-rating">
+                    <div class="rating-stars">
+                        ${generateStars(rating)}
+                    </div>
+                    <span>${rating}</span>
+                </div>
+    `;
+    
+    if (oldPrice && discount > 0) {
+        html += `
+                <div class="property-price">
+                    <div class="current-price">Rp ${formatPrice(price)}<span>/ malam</span></div>
+                    <div class="old-price"><s>Rp ${formatPrice(oldPrice)}</s> <span>/ malam</span></div>
+                </div>
+        `;
+    } else {
+        html += `
+                <div class="property-price">
+                    Rp ${formatPrice(price)} <span>/ malam</span>
+                </div>
+        `;
+    }
+    
+    html += `
+                <button class="btn btn-primary book-btn" data-id="${id}" style="width: 100%; margin-top: 15px;">
+                    <i class="fas fa-calendar-check"></i> Pesan Sekarang
+                </button>
+            </div>
+        </div>
+    `;
+    
+    return html;
+}
+
+// Fungsi untuk setup event listeners (JANGAN DIHAPUS)
+function setupEventListeners() {
+    // Event listener untuk tombol pesan (delegasi)
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.book-btn')) {
+            const btn = e.target.closest('.book-btn');
+            const propertyId = btn.getAttribute('data-id');
+            
+            if (propertyId) {
+                localStorage.setItem('selected_property', propertyId);
+                window.location.href = `booking.html?id=${propertyId}`;
+            }
+        }
+        
+        // Event listener untuk wishlist button
+        if (e.target.closest('.wishlist-btn') || e.target.closest('.wishlist-btn i')) {
+            const wishlistBtn = e.target.closest('.wishlist-btn');
+            const icon = wishlistBtn.querySelector('i');
+            
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                icon.style.color = '#ff6b6b';
+                alert('Ditambahkan ke wishlist!');
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                icon.style.color = '';
+                alert('Dihapus dari wishlist!');
+            }
+        }
+    });
+    
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+    }
+    
+    // Search button
+    const searchButton = document.querySelector('.search-button');
+    if (searchButton) {
+        searchButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const location = document.getElementById('location').value;
+            const guests = document.getElementById('guests').value;
+            alert(`Mencari penginapan di ${location} untuk ${guests} tamu...`);
+        });
+    }
+    
+    // Load more button
+    const loadMoreBtn = document.getElementById('load-more');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'hotelvilla.html';
+        });
+    }
+}
+
+// Helper functions (JANGAN DIHAPUS)
+function generateStars(rating) {
+    let stars = '';
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 >= 0.5;
+    
+    for (let i = 0; i < fullStars; i++) {
+        stars += '<i class="fas fa-star"></i>';
+    }
+    
+    if (hasHalfStar) {
+        stars += '<i class="fas fa-star-half-alt"></i>';
+    }
+    
+    const emptyStars = 5 - Math.ceil(rating);
+    for (let i = 0; i < emptyStars; i++) {
+        stars += '<i class="far fa-star"></i>';
+    }
+    
+    return stars;
+}
+
+function formatPrice(price) {
+    if (typeof price !== 'number') {
+        price = parseFloat(price) || 0;
+    }
+    return price.toLocaleString('id-ID');
+}
+
+function showError(message) {
+    const propertiesGrid = document.getElementById('properties-grid');
+    if (propertiesGrid) {
+        propertiesGrid.innerHTML = `
+            <div style="text-align: center; padding: 40px; color: #dc3545; grid-column: 1 / -1;">
+                <i class="fas fa-exclamation-triangle fa-2x"></i>
+                <h3>Terjadi Kesalahan</h3>
+                <p>${message}</p>
+                <button onclick="location.reload()" class="btn btn-primary" style="margin-top: 20px;">
+                    <i class="fas fa-redo"></i> Coba Lagi
+                </button>
+            </div>
+        `;
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleepWell - Konfirmasi Pemesanan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/confirm-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="Logo.png" alt="SleepWell Logo" class="logo-image">
+                    <div class="logo-text">
+                        <span class="sleep">Sleep</span>
+                        <span class="well">Well</span>
+                    </div>
+                </div>
+                
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <div class="nav-links" id="nav-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="hotelvilla.html">Hotel & Villa</a>
+                    <a href="leaderboard.html">Leaderboard</a>
+                </div>
+                
+                <div class="user-profile">
+                    <div class="user-info" id="user-info">
+                        <div class="user-avatar">AC</div>
+                        <span>Akmalia Ciety</span>
+                        <span class="badge">Sleep Specialist</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="confirmation-main">
+        <div class="container">
+            <div class="confirmation-wrapper">
+                <!-- Success Message -->
+                <div class="success-header">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h1>Pemesanan Berhasil!</h1>
+                    <p class="success-message">Terima kasih telah memesan melalui SleepWell. Pesanan Anda telah dikonfirmasi.</p>
+                    <div class="booking-id">
+                        <span class="id-label">ID Pemesanan:</span>
+                        <span class="id-value">SW20231215123456</span>
+                    </div>
+                </div>
+
+                <!-- Booking Details -->
+                <div class="booking-details">
+                    <h2 class="details-title"><i class="fas fa-receipt"></i> Detail Pemesanan</h2>
+                    
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <span class="detail-label">Nama Pemesan</span>
+                            <span class="detail-value">Akmalia Ciety</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Hotel/Villa</span>
+                            <span class="detail-value">Amora Hills Hotel</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Tipe Kamar</span>
+                            <span class="detail-value">Deluxe Room</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Check-in</span>
+                            <span class="detail-value">15 Desember 2023</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Check-out</span>
+                            <span class="detail-value">20 Desember 2023</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Durasi</span>
+                            <span class="detail-value">5 Malam</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Jumlah Tamu</span>
+                            <span class="detail-value">2 Orang</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Total Pembayaran</span>
+                            <span class="detail-value price">Rp 4.275.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Steps -->
+                <div class="next-steps">
+                    <h2 class="steps-title"><i class="fas fa-list-check"></i> Langkah Selanjutnya</h2>
+                    
+                    <div class="steps-list">
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="step-content">
+                                <h3>Email Konfirmasi</h3>
+                                <p>Konfirmasi pemesanan telah dikirim ke email Anda. Cek folder spam jika tidak ditemukan.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="step-content">
+                                <h3>Check-in</h3>
+                                <p>Tunjukkan email konfirmasi atau ID pemesanan saat check-in di hotel.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="step-content">
+                                <h3>Beri Rating</h3>
+                                <p>Setelah menginap, berikan rating dan ulasan untuk membantu pengguna lain.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rating Section -->
+                <div class="rating-section" id="rating-section">
+                    <h2 class="rating-title"><i class="fas fa-star-half-alt"></i> Berikan Rating & Ulasan</h2>
+                    <p class="rating-subtitle">Bagikan pengalaman menginap Anda untuk membantu pengguna lain</p>
+                    
+                    <form id="rating-form" class="rating-form">
+                        <!-- Hotel Info -->
+                        <div class="hotel-info">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Amora Hills" class="hotel-image">
+                            <div class="hotel-details">
+                                <h3>Amora Hills Hotel</h3>
+                                <p class="hotel-location"><i class="fas fa-map-marker-alt"></i> Kuta, Bali</p>
+                                <div class="hotel-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-text">4.4 (128 ulasan)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Rating Stars -->
+                        <div class="rating-stars-container">
+                            <label class="rating-label">Rating Keseluruhan</label>
+                            <div class="stars-rating" id="stars-rating">
+                                <span class="star" data-value="1">
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <span class="star" data-value="2">
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <span class="star" data-value="3">
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <span class="star" data-value="4">
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <span class="star" data-value="5">
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </div>
+                            <div class="rating-text-display">
+                                <span id="rating-value">0</span> / 5
+                            </div>
+                        </div>
+                        
+                        <!-- Category Ratings -->
+                        <div class="category-ratings">
+                            <h3>Rating Berdasarkan Kategori</h3>
+                            
+                            <div class="category-item">
+                                <label>Kebersihan</label>
+                                <div class="category-stars">
+                                    <span class="cat-star" data-category="cleanliness" data-value="1">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="cleanliness" data-value="2">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="cleanliness" data-value="3">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="cleanliness" data-value="4">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="cleanliness" data-value="5">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="category-item">
+                                <label>Kenyamanan</label>
+                                <div class="category-stars">
+                                    <span class="cat-star" data-category="comfort" data-value="1">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="comfort" data-value="2">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="comfort" data-value="3">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="comfort" data-value="4">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="comfort" data-value="5">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="category-item">
+                                <label>Layanan</label>
+                                <div class="category-stars">
+                                    <span class="cat-star" data-category="service" data-value="1">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="service" data-value="2">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="service" data-value="3">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="service" data-value="4">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="service" data-value="5">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="category-item">
+                                <label>Lokasi</label>
+                                <div class="category-stars">
+                                    <span class="cat-star" data-category="location" data-value="1">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="location" data-value="2">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="location" data-value="3">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="location" data-value="4">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="cat-star" data-category="location" data-value="5">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Review Text -->
+                        <div class="review-section">
+                            <label for="review" class="review-label">Ulasan Anda</label>
+                            <textarea id="review" name="review" rows="5" placeholder="Bagikan pengalaman menginap Anda... 
+Contoh: Pelayanan sangat ramah, kamar bersih, sarapan enak, lokasi strategis." 
+class="review-textarea"></textarea>
+                            <div class="char-count">
+                                <span id="char-count">0</span> / 500 karakter
+                            </div>
+                        </div>
+                        
+                        <!-- Photos -->
+                        <div class="photos-section">
+                            <label class="photos-label">Upload Foto (Opsional)</label>
+                            <div class="photos-upload">
+                                <div class="upload-area" id="upload-area">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Drag & drop foto atau <span class="browse-text">browse</span></p>
+                                    <p class="upload-note">Maksimum 5 foto, format JPG/PNG</p>
+                                </div>
+                                <input type="file" id="photo-upload" accept="image/*" multiple style="display: none;">
+                                <div class="preview-container" id="preview-container">
+                                    <!-- Preview images will appear here -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="rating-actions">
+                            <button type="submit" class="btn btn-primary rating-submit">
+                                <i class="fas fa-paper-plane"></i> Kirim Rating & Ulasan
+                            </button>
+                            <button type="button" class="btn btn-secondary skip-rating" id="skip-rating">
+                                Nanti Saja
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Rating Guidelines -->
+                    <div class="rating-guidelines">
+                        <h4><i class="fas fa-lightbulb"></i> Tips Memberi Rating yang Baik:</h4>
+                        <ul>
+                            <li>Berdasarkan pengalaman pribadi Anda</li>
+                            <li>Sebutkan hal-hal spesifik yang Anda sukai/tidak sukai</li>
+                            <li>Gunakan bahasa yang sopan dan konstruktif</li>
+                            <li>Upload foto asli dari pengalaman menginap</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="confirmation-actions">
+                    <a href="index.html" class="btn btn-primary" id="btn-back-beranda">
+                        <i class="fas fa-home"></i> Kembali ke Beranda
+                    </a>
+                    <a href="hotelvilla.html" class="btn btn-secondary">
+                        <i class="fas fa-search"></i> Cari Penginapan Lain
+                    </a>
+                    <button class="btn btn-accent" id="download-receipt">
+                        <i class="fas fa-download"></i> Download Invoice
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="logo">
+                        <img src="Logo.png" alt="SleepWell Logo" class="logo-image">
+                        <div class="logo-text">
+                            <span class="sleep">Sleep</span>
+                            <span class="well">Well</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">SleepWell adalah platform reservasi hotel dan villa terkemuka yang menyediakan pengalaman menginap terbaik di berbagai lokasi.</p>
+                    <div class="footer-links">
+                        <a href="#" class="footer-links"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-links"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-links"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="hotelvilla.html">Hotel & Villa</a></li>
+                        <li><a href="leaderboard.html">Leaderboard</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="#">Pemesanan Online</a></li>
+                        <li><a href="#">Cari Berdasarkan Lokasi</a></li>
+                        <li><a href="#">Rekomendasi Personal</a></li>
+                        <li><a href="#">Program Loyalitas</a></li>
+                        <li><a href="#">Bantuan 24/7</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Kontak Kami</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                        <li><i class="fas fa-phone"></i> +62 21 1234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@sleepwell.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 SleepWell. Semua hak dilindungi.</p>
+                <p class="disclaimer"><i class="fas fa-info-circle"></i> Terima kasih telah mempercayai SleepWell untuk pengalaman menginap Anda.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/confirm.js"></script>
+</body>
+</html>
